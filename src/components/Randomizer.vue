@@ -168,31 +168,60 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .randomizer {
-    max-width: 1200px;
+    max-width: 800px;
     text-align: center;
     margin: auto;
   }
 
   h3 {
-    font-size: 50px;
+    font-size: 40px;
     margin: 0;
+
+    @media (min-width: 768px) {
+      font-size: 50px;
+    }
   }
 
   h4 {
-    font-size: 30px;
+    font-size: 25px;
+    margin: 0.2em auto;
+
+    @media (min-width: 768px) {
+      font-size: 30px;
+    }
   }
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
     list-style-type: none;
     padding: 0;
+    margin-top: 2em;
+
+    @media (max-width: 766px) {
+      text-align: left;
+
+      h3, h4 {
+        display: inline-block;
+      } 
+
+      h3 {
+        margin-right: 0.5em;
+        vertical-align: middle;
+      }     
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 3fr);
+    }
   }
 
   li {
     display: inline-block;
+    margin: 1em auto;
   }
 
   .placeholder {
