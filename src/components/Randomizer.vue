@@ -173,6 +173,7 @@ export default {
     max-width: 800px;
     text-align: center;
     margin: auto;
+    margin-bottom: 3em;
   }
 
   h3 {
@@ -196,7 +197,7 @@ export default {
   ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 15px;
     list-style-type: none;
     padding: 0;
     margin-top: 2em;
@@ -216,12 +217,19 @@ export default {
 
     @media (min-width: 768px) {
       grid-template-columns: repeat(3, 3fr);
+      grid-gap: 20px;      
     }
   }
 
   li {
     display: inline-block;
-    margin: 1em auto;
+    margin: 0 0 0 3em;
+    text-align: left;
+
+    @media (min-width: 768px) {
+      margin: 1em auto;
+      text-align: center;
+    }
   }
 
   .placeholder {
