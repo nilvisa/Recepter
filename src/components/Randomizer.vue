@@ -188,6 +188,7 @@ export default {
   h4 {
     font-size: 25px;
     margin: 0.2em auto;
+    color: #000;
 
     @media (min-width: 768px) {
       font-size: 30px;

@@ -14,10 +14,9 @@ export default {
 <style lang="scss">
   @import url('https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day');
   
-  $background: #FF483C;
-  $text: #fff;
-  $dark: #7F322B;
-  $light: #FF889A;
+  $background: #FFDA00;
+  $text: #000;
+  $light: #fd8787;
   
   body {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -34,7 +33,7 @@ export default {
     font-family: 'Dawning of a New Day', cursive;
     font-size: 80px;
     margin: 0.1em auto;
-    text-shadow: 2px 2px $light;
+    text-shadow: 2px 2px #fff;
 
     @media (min-width: 768px) {
       margin: 0.5em auto;      
@@ -42,18 +41,21 @@ export default {
   }
 
   button {
-    padding: 1em;
-    color: $text;
-    background: $light;
-    border: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    cursor: pointer;
+    padding: 0.7em 1em;
+    color: $background;
+    background: #000;
+    border: 0;
+    border-bottom: 2px solid $background;
     outline: none;
-    transition: background 0.5s ease-in-out;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 
-    &:active {
-      background: darken($light, 4%);
+    &:hover {
+      border-bottom: 2px solid #fff;
     }
   }
 </style>
